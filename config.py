@@ -1,0 +1,19 @@
+
+# [ Web ]
+TOKEN = '6317152966:AAG14LyLr5yjFI15jIYUA6oHWBGIjmByJM0'
+CERT = '/home/mikhailtte/certs/cert.pem'
+WEBHOOK_HOST = 'https://185.116.193.204:443'
+SUPPORT_CHAT_ID = -1001812707249
+DATABASE = 'database.db'
+LOG_FILE = 'logs.log'
+
+# [ User Parameters ]
+# время в секундах
+SESSION_LIFETIME = 3600
+MESSAGE_REMINDER_TIME =  900
+
+# [ System ]
+WEBHOOK_PATH = f'/{TOKEN}'
+WEBHOOK_URL = f"{WEBHOOK_HOST}{WEBHOOK_PATH}"
+WEBAPP_HOST = '0.0.0.0'
+WEBAPP_PORT = 8000

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Правила пользования ботом</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #e4f2f0, #e6e6fa);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .command {
+            background-color: #ddd;
+            border-radius: 5px;
+            /* padding: 2px 5px; */
+            font-family: monospace;
+            font-size: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+            font-weight: normal;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Как работает бот</h1>
+        <div class="section">
+            <p>1. Покупатели пишут напрямую боту.</p>
+            <p>2. Бот пересылает в группу те сообщения пользователей, которые требуют ответа человека (специалиста).</p>
+            <p>
+                <b>
+                    3. Для ответа клиенту используйте по его сообщению кнопку "ответить", 
+                    или свайп влево, или двойной клик (если с компьютера)
+                </b>
+            </p>
+            <p><b>4. Сообщения без ответа на какое-либо (свайп влево и т.д.) — остаются в группе и конфиденциальны.</b></p>
+            <p>5. Чтобы не приходили напоминания нажмите "игнор" под сообщением.</p>
+            <p>6. Вы можете отвечать не более 1-го раза на каждое напоминание — используйте оригинальное сообщение.</p>
+            <p>
+                7. Если от покупателя не будет ожидающих ответа сообщений в течение 1 часа 
+                — мы не сможем больше писать ему первыми, сессия закроется.
+            </p>
+        </div>
+        <h1>Команды</h1>
+        <div class="section">
+            <p>1. Все команды бота начинаются с "/".</p>
+            <p>
+                2. Любой ответ клиенту, начинающийся с "/" или "\" — <b>не будет ему отправлен</b>. 
+                Неправильно набранная команда не будет куда-либо отправлена или обработана.
+            </p>
+            <p>3. Некоторые команды необходимо писать как ответ на сообщение, некоторые (общие команды) этого не требуют.</p>
+            <p>4. Команды не работают с напоминаниями  — используйте оригинальное сообщение.</p>
+            <p>
+                5. Список команд доступен по: <span class="command">/команды</span> <span class="command">/кмд</span> 
+                 <span class="command">/commands</span> <span class="command">/cmd</span> 
+            </p>
+        </div>
+        <h2>ИСТОРИЯ ПЕРЕПИСКИ</h2>
+        <div class="section">
+            <p>
+                1. Посмотреть историю переписки с клиентом можно ответив на его любое 
+                сообщение набрав команду <span class="command">/история</span> — целиком, 
+                <span class="command">/сессия</span> — последняя переписка.
+            </p>
+        </div>
+        <h2>УДАЛИТЬ СООБЩЕНИЕ</h2>
+        <div class="section">
+            <p>
+                2. Удалить у пользователя уже отправленное ему письмо: ответьте 
+                на (свое) сообщение командой <span class="command">/удалить</span>.
+            </p>
+        </div>
+        <h2>ЗАМЕТКА О ПОКУПАТЕЛЕ</h2>
+        <div class="section">
+            <p>
+                3. Добавить комментарий (заметку) <b>который будет виден только нам</b> 
+                можно ответив на сообщение нужного покупателя командой <span class="command">/заметка <i>любой текст</i></span>. 
+                <br>Что бы посмотреть заметку отправьте команду без текста самой заметки: <span class="command">/заметка</span>.
+                <br>Удалить заметку: <span class="command">/удалить_заметку</span>
+                <br><i>Текст новой заметки перезапишет старую заметку!</i>
+            </p>
+        </div>
+        <h2>ЧЕРНЫЙ СПИСОК</h2>
+        <div class="section">
+            <p>
+                2. Добавить клиента в черный список можно ответив на его сообщение <span class="command">/вчс</span>.
+                <br>Удалить командой <span class="command">/изчс</span>.
+                <br>Посмотреть черный список можно командой <span class="command">/чс</span> или <span class="command">/blacklist</span>.
+            </p>
+        </div>
+        <h1>Административные команды</h1>
+        <div class="section">
+            <p>
+                Команды этого раздела доступны только в личной переписке с ботом и только участникам группы.
+            </p>
+        </div>
+        <h2>АВТООТВЕТЧИК</h2>
+        <div class="section">
+            <p>
+                Автоответ по ключевым словам будет отправляться покупателям пока они не начнут диалог с человеком.
+                <br><br>1. Добавить автоответ можно по команде <span class="command">/добавить_автоответ</span>
+                <br>Посмотреть список автоответов: <span class="command">/автоответчик</span>.
+                <br>Удалить автоответ: <span class="command">/удалить_автоответ <i>ключевое слово</i></span></p>
+        </div>
+        <h2>ТОВАРЫ</h2>
+        <div class="section">
+            <p>
+                Список товаров: <span class="command">/товары</span>  — доступно всем во всех чатах.<br>
+                Добавить товар: <span class="command">/добавить_товар</span><br>
+                Удалить товар: <span class="command">/удалить_товар <i>название товара</i></span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

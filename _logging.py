@@ -1,5 +1,5 @@
 import logging
-from parameters import LOG_FILE
+from config import LOG_FILE
 
 LOG_LEVEL = logging.ERROR
 
